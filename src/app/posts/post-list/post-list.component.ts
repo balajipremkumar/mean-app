@@ -9,13 +9,13 @@ import { PostsService } from '../posts.service';
   styleUrls: ['./post-list.component.scss']
 })
 export class PostListComponent implements OnInit {
-  posts: Post[]=[];
+  posts: Post[] = [];
   private postsSub:Subscription
 
   constructor(public postsService:PostsService) { }
 
   ngOnInit(): void {
-    this.posts = this.postsService.getPost();
+    this.postsService.getPost();
     this.postsSub = this.postsService.getPostUpdateListner()
     .subscribe((posts:Post[])=>{
        this.posts = posts

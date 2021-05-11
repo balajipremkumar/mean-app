@@ -17,7 +17,6 @@ export class PostCreateComponent implements OnInit {
   }
 
   onAddPost(form:NgForm){
-    debugger
     if(form.invalid){
       return;
     }
