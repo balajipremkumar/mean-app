@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button'
 import  {MatFormFieldModule} from '@angular/material/form-field' ;
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +40,7 @@ import { HttpClientModule} from '@angular/common/http'
     MatExpansionModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
