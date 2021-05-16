@@ -3,6 +3,8 @@ const router =  express.Router();
 const Post = require("../models/post");
 
 
+
+
 router.post("", (req, res, next)=> {
     const post = new Post({ 
       title: req.body.title,
@@ -31,7 +33,7 @@ router.post("", (req, res, next)=> {
     });
   });
   
-  router.get('',(req,res,next)=> { 
+  router.get("",(req,res,next)=> { 
     Post.find().then(documents =>{
       res.status(200).json({
         message:'post fetched successfully',

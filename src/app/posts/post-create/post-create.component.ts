@@ -13,7 +13,7 @@ export class PostCreateComponent implements OnInit {
   enteredTitle = "";
   enteredContent = "";
   post:Post;
-  isLoading =  true;
+  isLoading =  false;
   private mode = "create";
   private postId :string;
   

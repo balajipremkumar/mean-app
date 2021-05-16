@@ -1,7 +1,7 @@
 const express =  require("express");
 const bodyParser =  require("body-parser");
 const mongoose = require('mongoose');
-const postRoutes = require('./routes/post') 
+const postsRoutes = require('./routes/post') 
 const app = express();
 
 
@@ -17,8 +17,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 
 app.use((req, res, next) => {
   res.setHeader(
-    'Access-Control-Allow-Origin', '*'
-  );
+    'Access-Control-Allow-Origin', '*');
   res.setHeader(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept'
@@ -31,5 +30,5 @@ app.use((req, res, next) => {
 });
 
 
-app.use('api/posts',postRoutes)
+app.use('/api/posts',postsRoutes);
 module.exports = app;  
