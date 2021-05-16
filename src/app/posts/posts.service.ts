@@ -31,13 +31,14 @@ export class PostsService {
        this.postUpdated.next([...this.posts]);
      });
   }
-ś
-  getPostUpdateListner(id:string) {
-    return this.http.get<{_id:string, title:string, content:string}>("http://localhost:3000/api/posts/" + id);
+
+  getPostUpdateListner() {
+    return this.postUpdated.asObservable();
   }
 
   getPost(id:string){
-    return {...this.posts.find((p)=> p.id === id)};
+    return this.http.get<{_id:string, title:string, content:string}>("http://localhost:3000/api/posts/" + id);
+    //return {...this.posts.find((p)=> p.id === id)};
   }
 
   addPost(title:string,content:string) {
